@@ -12,7 +12,7 @@ async fn main() -> std::io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_server=info,actix_web=info");
     env_logger::init();
 
-    info!("Rust Actix Server running... http://localhost:8080/");
+    info!("Rust Actix Server running... http://0.0.0.0:8080/");
     HttpServer::new(|| App::new()
         .service(health)
         .service(news)
